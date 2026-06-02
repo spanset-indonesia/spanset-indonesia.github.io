@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpanSet Indonesia — Safety. Lifting. Protection.</title>
+  <link rel="stylesheet" href="style.css">
+    <meta name="title" content="SpanSet Indonesia — Safety. Lifting. Protection.">
+    <meta name="description"
+        content="SpanSet adalah pionir perlengkapan lifting, lashing, dan height safety di dunia, menjadi principal dari merek dagang no 1 di Indonesia sejak 1997.">
+    <meta name="keywords"
+        content="Spanset, Spanset Indonesia, Webbing Sling, Webbing, Lifting">
+    <meta name="author" content="Spanset">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesian">
+    <meta name="geo.position" content="-6.098882164993395;106.97517988021606" />
+    <meta name="geo.region" content="ID-JB" />
+    <meta name="geo.placename" content="Jawa Barat" />
+    <link rel="canonical" href="https://spanset.github.io/" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spanset.github.io/">
+    <meta property="og:title" content="SpanSet Indonesia — Safety. Lifting. Protection.">
+    <meta property="og:description"
+        content="SpanSet adalah pionir perlengkapan lifting, lashing, dan height safety di dunia, menjadi principal dari merek dagang no 1 di Indonesia sejak 1997.">
+    <meta property="og:image" content="https://spanset.github.io/Spanset-og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Spanset">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://spanset.github.io/">
+    <meta property="twitter:title" content="SpanSet Indonesia — Safety. Lifting. Protection.">
+    <meta property="twitter:description"
+        content="SpanSet adalah pionir perlengkapan lifting, lashing, dan height safety di dunia, menjadi principal dari merek dagang no 1 di Indonesia sejak 1997.">
+    <meta property="twitter:image" content="https://spanset.github.io/Spanset-og-image.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://spanset.github.io/Spanset.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://spanset.github.io/Spanset.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://spanset.github.io/sitemap.xml" />
+  <style>
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 72px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 5rem 5vw;
+      overflow: hidden;
+      gap: 4vw;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 70% 50%, rgba(214,43,43,.08) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 80% at 0% 50%, rgba(214,43,43,.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* diagonal grid lines */
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .hero-text { position: relative; z-index: 2; }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: .72rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 1.8rem;
+    }
+    .hero-eyebrow .line { width: 36px; height: 2px; background: var(--red); }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4rem, 8vw, 7.5rem);
+      line-height: .92;
+      letter-spacing: .04em;
+      margin-bottom: 2rem;
+    }
+    .hero h1 .outline {
+      -webkit-text-stroke: 1.5px var(--silver);
+      color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--ash);
+      max-width: 46ch;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .hero-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.6rem;
+      letter-spacing: .06em;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hero-stat-num span { color: var(--red); }
+    .hero-stat-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: .7rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--ash);
+      margin-top: .25rem;
+    }
+
+    /* ── Hero Visual ── */
+    .hero-visual {
+      position: relative;
+      z-index: 2;
+      height: 520px;
+    }
+
+    .hero-main-card {
+      position: absolute;
+      top: 0; left: 5%;
+      width: 75%;
+      background: var(--iron);
+      border: 1px solid rgba(255,255,255,.07);
+      border-top: 3px solid var(--red);
+      padding: 2rem;
+    }
+
+    .hmc-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ash);
+      margin-bottom: 1.2rem;
+    }
+
+    .hmc-product-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: .9rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .hmc-product-row:last-child { border: none; }
+
+    .hmc-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--red);
+      flex-shrink: 0;
+    }
+    .hmc-dot.green { background: #27AE60; }
+    .hmc-dot.yellow { background: #F1C40F; }
+
+    .hmc-product-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: .9rem;
+      letter-spacing: .06em;
+      flex: 1;
+    }
+    .hmc-product-cat {
+      font-size: .72rem;
+      color: var(--ash);
+      letter-spacing: .08em;
+    }
+    .hmc-product-cert {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: .68rem;
+      letter-spacing: .1em;
+      padding: .18rem .5rem;
+      background: rgba(214,43,43,.15);
+      color: var(--red);
+      border: 1px solid rgba(214,43,43,.3);
+    }
+
+    .hero-accent-card {
+      position: absolute;
+      bottom: 5%; right: 0;
+      width: 58%;
+      background: var(--red);
+      padding: 1.6rem 2rem;
+    }
+    .hac-big {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      letter-spacing: .06em;
+      line-height: 1;
+    }
+    .hac-sub {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: .78rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      opacity: .75;
+      margin-top: .3rem;
+    }
+
+    .hero-vert-line {
+      position: absolute;
+      right: 3%; top: 8%;
+      width: 1.5px; height: 100px;
+      background: linear-gradient(to bottom, transparent, var(--red), transparent);
+    }
+
+    /* ── Marquee ── */
+    .marquee-wrap {
+      background: var(--red);
+      padding: .75rem 0;
+      overflow: hidden;
+      border-top: 1px solid var(--red-dark);
+      border-bottom: 1px solid var(--red-dark);
+    }
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marquee 22s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0 2.5rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: .78rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.85);
+    }
+    .marquee-sep { width: 5px; height: 5px; background: rgba(255,255,255,.5); border-radius: 50%; flex-shrink: 0; }
+
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ── Solutions section ── */
+    .solutions-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .solutions-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      letter-spacing: .06em;
+    }
+
+    .sol-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--zinc);
+    }
+
+    .sol-card {
+      background: var(--iron);
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: background .25s;
+    }
+    .sol-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--red);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+    }
+    .sol-card:hover { background: var(--zinc); }
+    .sol-card:hover::before { transform: scaleX(1); }
+
+    .sol-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .sol-num {
+      position: absolute;
+      top: 2rem; right: 2rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      color: rgba(255,255,255,.04);
+      line-height: 1;
+      letter-spacing: .04em;
+    }
+
+    .sol-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: .06em;
+      margin-bottom: .7rem;
+    }
+
+    .sol-desc {
+      font-size: .88rem;
+      color: var(--ash);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .sol-link {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: .75rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+
+    /* ── Why SpanSet ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5vw;
+      align-items: center;
+    }
+
+    .why-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 5.5vw, 5rem);
+      letter-spacing: .05em;
+      margin-bottom: 1.5rem;
+    }
+
+    .why-desc {
+      color: var(--ash);
+      line-height: 1.8;
+      font-size: .95rem;
+      max-width: 44ch;
+      margin-bottom: 2rem;
+    }
+
+    .feature-list { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.1rem 1.4rem;
+      background: var(--iron);
+      border-left: 3px solid var(--red);
+    }
+    .feature-item-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .feature-item-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: .95rem;
+      letter-spacing: .06em;
+      margin-bottom: .25rem;
+    }
+    .feature-item-desc { font-size: .82rem; color: var(--ash); line-height: 1.55; }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .cert-block {
+      background: var(--iron);
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,.06);
+      text-align: center;
+    }
+    .cert-block-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: .08em;
+      color: var(--red);
+      margin-bottom: .3rem;
+    }
+    .cert-block-desc {
+      font-size: .75rem;
+      color: var(--ash);
+      letter-spacing: .05em;
+      line-height: 1.5;
+    }
+
+    /* ── Clients strip ── */
+    .clients-section { background: var(--iron); }
+
+    .clients-label {
+      text-align: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: .72rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--ash);
+      margin-bottom: 2.5rem;
+    }
+
+    .clients-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .5px;
+      background: var(--zinc);
+    }
+    .client-item {
+      flex: 1;
+      min-width: 140px;
+      background: var(--iron);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ash);
+      transition: color .2s, background .2s;
+    }
+    .client-item:hover { color: var(--white); background: var(--zinc); }
+
+    /* ── CTA Banner ── */
+    .cta-banner {
+      background: var(--red);
+      padding: 5rem 5vw;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: 'SAFETY';
+      position: absolute;
+      right: 5vw; top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12rem;
+      letter-spacing: .04em;
+      color: rgba(255,255,255,.06);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .cta-banner-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      letter-spacing: .05em;
+      line-height: 1;
+    }
+    .cta-banner-sub {
+      font-size: .9rem;
+      opacity: .8;
+      margin-top: .6rem;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--red);
+      clip-path: polygon(0 0, 93% 0, 100% 18%, 100% 100%, 7% 100%, 0 82%);
+    }
+    .btn-white:hover { background: var(--offwhite); }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding: 3rem 5vw; }
+      .hero-visual { display: none; }
+      .why-grid { grid-template-columns: 1fr; }
+      .sol-grid { grid-template-columns: 1fr; }
+      .cta-banner { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+      .cta-banner::before { display: none; }
+    }
+    @media (max-width: 640px) {
+      .hero-stats { flex-direction: column; gap: 1.2rem; }
+      .cert-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+  <a class="nav-logo" href="index.php">
+    <div class="nav-logo-mark">SS</div>
+    <div class="nav-logo-text">
+      SpanSet
+      <span>Indonesia</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.php" class="active">Home</a></li>
+    <li><a href="products.php">Products</a></li>
+    <li><a href="about.php">About</a></li>
+    <li><a href="contact.php">Contact</a></li>
+  </ul>
+  <a href="contact.php" class="nav-cta btn">
+    <span>Get a Quote</span>
+    <span>→</span>
+  </a>
+  <div class="nav-hamburger" onclick="this.classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<main class="page">
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="hero-text anim-up">
+      <div class="hero-eyebrow">
+        <span class="line"></span>
+        Trusted Since 1997 — ISO 9001 Certified
+      </div>
+      <h1>
+        LIFT<br>
+        <span class="outline">SAFE.</span><br>
+        WORK<br>
+        HIGHER.
+      </h1>
+      <p class="hero-desc">
+        Indonesia's premier partner in lifting systems, load control, and height safety. Engineering protection for workers and industries across the archipelago.
+      </p>
+      <div class="hero-actions">
+        <a href="products.php" class="btn btn-primary">Explore Products →</a>
+        <a href="about.php" class="btn btn-outline">Our Story</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">50<span>+</span></div>
+          <div class="hero-stat-label">Years Global Experience</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">27<span>+</span></div>
+          <div class="hero-stat-label">Years in Indonesia</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">ISO<span>✓</span></div>
+          <div class="hero-stat-label">9001 Certified</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual anim-in d3">
+      <div class="hero-main-card">
+        <div class="hmc-label">Active Product Lines</div>
+        <div class="hmc-product-row">
+          <div class="hmc-dot"></div>
+          <div class="hmc-product-name">Webbing Slings</div>
+          <div class="hmc-product-cat">Lifting</div>
+          <div class="hmc-product-cert">EN 1492-1</div>
+        </div>
+        <div class="hmc-product-row">
+          <div class="hmc-dot green"></div>
+          <div class="hmc-product-name">Safety Harnesses</div>
+          <div class="hmc-product-cat">Height Safety</div>
+          <div class="hmc-product-cert">EN 361</div>
+        </div>
+        <div class="hmc-product-row">
+          <div class="hmc-dot"></div>
+          <div class="hmc-product-name">Ratchet Lashings</div>
+          <div class="hmc-product-cat">Load Control</div>
+          <div class="hmc-product-cert">EN 12195-2</div>
+        </div>
+        <div class="hmc-product-row">
+          <div class="hmc-dot yellow"></div>
+          <div class="hmc-product-name">Wire Rope Slings</div>
+          <div class="hmc-product-cat">Lifting</div>
+          <div class="hmc-product-cert">EN 13411</div>
+        </div>
+        <div class="hmc-product-row">
+          <div class="hmc-dot green"></div>
+          <div class="hmc-product-name">Fall Arrestors</div>
+          <div class="hmc-product-cat">Height Safety</div>
+          <div class="hmc-product-cert">EN 360</div>
+        </div>
+      </div>
+
+      <div class="hero-accent-card">
+        <div class="hac-big">500K+</div>
+        <div class="hac-sub">Hours of Field Experience</div>
+      </div>
+
+      <div class="hero-vert-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ MARQUEE ══ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <!-- duplicated for infinite scroll -->
+      <span class="marquee-item"><span class="marquee-sep"></span> Fall Protection Systems</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> Lifting & Rigging Equipment</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> Load Control Solutions</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> Height Safety Training</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> Inspection & Certification</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> ISO 9001:2015</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> SNI Compliant</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> Fall Protection Systems</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> Lifting & Rigging Equipment</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> Load Control Solutions</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> Height Safety Training</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> Inspection & Certification</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> ISO 9001:2015</span>
+      <span class="marquee-item"><span class="marquee-sep"></span> SNI Compliant</span>
+    </div>
+  </div>
+
+  <!-- ══ SOLUTIONS ══ -->
+  <section class="section">
+    <div class="solutions-header">
+      <div>
+        <div class="section-label">What We Provide</div>
+        <div class="solutions-title">THREE PILLARS<br>OF SAFETY</div>
+      </div>
+      <a href="products.php" class="btn btn-ghost">View all products <span class="arrow">→</span></a>
+    </div>
+
+    <div class="sol-grid">
+      <a href="products.php#lifting" class="sol-card anim-up d1">
+        <span class="sol-num">01</span>
+        <span class="sol-icon">🔗</span>
+        <div class="sol-title">Lifting Systems</div>
+        <p class="sol-desc">Webbing slings, round slings, wire rope slings, shackles, and complete rigging assemblies engineered for maximum load integrity.</p>
+        <div class="sol-link">Explore Lifting →</div>
+      </a>
+      <a href="products.php#height" class="sol-card anim-up d2">
+        <span class="sol-num">02</span>
+        <span class="sol-icon">🦺</span>
+        <div class="sol-title">Height Safety</div>
+        <p class="sol-desc">Full-body harnesses, lanyards, self-retracting lifelines, and rescue systems for work-at-height in any environment.</p>
+        <div class="sol-link">Explore Height Safety →</div>
+      </a>
+      <a href="products.php#load" class="sol-card anim-up d3">
+        <span class="sol-num">03</span>
+        <span class="sol-icon">⚓</span>
+        <div class="sol-title">Load Control</div>
+        <p class="sol-desc">Ratchet lashings, cam buckle systems, and cargo nets that keep loads secured during transport across road, sea, and rail.</p>
+        <div class="sol-link">Explore Load Control →</div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ WHY SPANSET ══ -->
+  <section class="section stripe-bg">
+    <div class="why-grid">
+      <div class="anim-up">
+        <div class="section-label">Why SpanSet Indonesia</div>
+        <div class="why-title">BUILT ON<br>TRUST &<br>PRECISION</div>
+        <p class="why-desc">
+          Established in 1997 and part of the global SpanSet International Group, we bring world-class safety engineering to Indonesia's most demanding industries — from mining and construction to offshore and logistics.
+        </p>
+        <a href="about.php" class="btn btn-primary">Our Full Story →</a>
+      </div>
+      <div>
+        <div class="feature-list anim-up d2">
+          <div class="feature-item">
+            <span class="feature-item-icon">🏭</span>
+            <div>
+              <div class="feature-item-title">Manufactured to Global Standards</div>
+              <div class="feature-item-desc">All products comply with EN, ISO, and SNI standards, tested and certified by independent authorities including Lloyd's Register QA.</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-item-icon">🎓</span>
+            <div>
+              <div class="feature-item-title">Application-Based Training</div>
+              <div class="feature-item-desc">Industry-recognized courses in safe lifting, rigging, rope access, and work at height. Practical and theory combined.</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-item-icon">🔍</span>
+            <div>
+              <div class="feature-item-title">Inspection & Asset Management</div>
+              <div class="feature-item-desc">Regular inspection services with no long-term contract obligations. Keep your workforce protected, always.</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-item-icon">🌏</span>
+            <div>
+              <div class="feature-item-title">International Group, Local Expertise</div>
+              <div class="feature-item-desc">Global R&D combined with deep understanding of Indonesian regulatory requirements and industrial conditions.</div>
+            </div>
+          </div>
+        </div>
+        <div class="cert-grid anim-up d3">
+          <div class="cert-block">
+            <div class="cert-block-name">ISO 9001</div>
+            <div class="cert-block-desc">Quality Management System — Lloyd's Register Certified</div>
+          </div>
+          <div class="cert-block">
+            <div class="cert-block-name">SNI</div>
+            <div class="cert-block-desc">Indonesian National Standard compliance across product lines</div>
+          </div>
+          <div class="cert-block">
+            <div class="cert-block-name">TNI AD</div>
+            <div class="cert-block-desc">Certificate of Testing — Dinas Penelitian & Pengembangan</div>
+          </div>
+          <div class="cert-block">
+            <div class="cert-block-name">EN / CE</div>
+            <div class="cert-block-desc">European standard conformity marking across all categories</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CLIENTS ══ -->
+  <section class="section-sm clients-section">
+    <div class="clients-label">Trusted by Indonesia's Leading Industries</div>
+    <div class="clients-row">
+      <div class="client-item">Oil & Gas</div>
+      <div class="client-item">Mining</div>
+      <div class="client-item">Construction</div>
+      <div class="client-item">Offshore</div>
+      <div class="client-item">Logistics</div>
+      <div class="client-item">Military</div>
+      <div class="client-item">Wind Energy</div>
+    </div>
+  </section>
+
+  <!-- ══ CTA BANNER ══ -->
+  <div class="cta-banner">
+    <div>
+      <div class="cta-banner-title">READY TO SECURE<br>YOUR OPERATIONS?</div>
+      <p class="cta-banner-sub">Talk to our safety specialists. Free consultation — no commitment required.</p>
+    </div>
+    <a href="contact.php" class="btn btn-white">Contact Us Today →</a>
+  </div>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a class="nav-logo" href="index.php" style="text-decoration:none;display:inline-flex;margin-bottom:.5rem;">
+        <div class="nav-logo-mark">SS</div>
+        <div class="nav-logo-text">SpanSet <span>Indonesia</span></div>
+      </a>
+      <p class="footer-brand-desc">
+        PT. SpanSet Indonesia — part of the International SpanSet Group. Providing lifting, load control, and height safety solutions across Indonesia since 1997.
+      </p>
+      <div class="footer-certs">
+        <span class="cert-tag">ISO 9001</span>
+        <span class="cert-tag">SNI</span>
+        <span class="cert-tag">CE Marked</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-title">Navigation</div>
+      <ul class="footer-links">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="products.php">Products</a></li>
+        <li><a href="about.php">About Us</a></li>
+        <li><a href="contact.php">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">Products</div>
+      <ul class="footer-links">
+        <li><a href="products.php#lifting">Lifting Systems</a></li>
+        <li><a href="products.php#height">Height Safety</a></li>
+        <li><a href="products.php#load">Load Control</a></li>
+        <li><a href="products.php#wire">Wire Rope</a></li>
+        <li><a href="products.php#training">Training</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">Contact</div>
+      <div class="footer-contact-item">
+        <span class="icon">📍</span>
+        <span>Jakarta, Indonesia</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="icon">📞</span>
+        <span>+62 21 285 100 77</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="icon">✉️</span>
+        <span>info@spanset.com</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="icon">🌐</span>
+        <span>www.spanset.com/id-id</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PT. SpanSet Indonesia. All rights reserved.</span>
+    <span>Part of SpanSet International Group</span>
+  </div>
+</footer>
+
+</body>
+</html>
