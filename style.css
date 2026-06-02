@@ -17,6 +17,7 @@
   --silver:   #C8CDD4;
   --white:    #F2F4F6;
   --offwhite: #E8EBEE;
+  --spanset: #004b73;
 
   --display: 'Bebas Neue', sans-serif;
   --condensed: 'Barlow Condensed', sans-serif;
@@ -65,7 +66,7 @@ body {
 
 .nav-logo-mark {
   width: 38px; height: 38px;
-  background: var(--red);
+  background: var(--spanset);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--display);
   font-size: 1.2rem;
@@ -147,10 +148,10 @@ body {
 .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
 .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all .25s; }
 
-/* ── Page Wrapper ── */
+/* ══════════════ PAGE WRAPPER ══════════════ */
 .page { padding-top: 72px; min-height: 100vh; }
 
-/* ── Section Utilities ── */
+/* ══════════════ SECTION UTILITIES ══════════════ */
 .section { padding: 6rem 5vw; }
 .section-sm { padding: 4rem 5vw; }
 
@@ -185,7 +186,7 @@ h1, h2, h3 { font-family: var(--condensed); font-weight: 700; line-height: 1.0; 
 .text-ash { color: var(--ash); }
 .text-silver { color: var(--silver); }
 
-/* ── Buttons ── */
+/* ══════════════ BUTTONS ══════════════ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -224,7 +225,7 @@ h1, h2, h3 { font-family: var(--condensed); font-weight: 700; line-height: 1.0; 
 .btn-ghost .arrow { transition: transform .2s; }
 .btn-ghost:hover .arrow { transform: translateX(5px); }
 
-/* ── Cards ── */
+/* ══════════════ CARDS ══════════════ */
 .card {
   background: var(--iron);
   border: 1px solid rgba(255,255,255,.06);
@@ -236,14 +237,14 @@ h1, h2, h3 { font-family: var(--condensed); font-weight: 700; line-height: 1.0; 
   transform: translateY(-4px);
 }
 
-/* ── Divider ── */
+/* ══════════════ DIVIDER ══════════════ */
 .divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--zinc) 30%, var(--zinc) 70%, transparent);
   margin: 0 5vw;
 }
 
-/* ── Stripe Texture ── */
+/* ══════════════ STRIPE TEXTURE ══════════════ */
 .stripe-bg {
   background-image: repeating-linear-gradient(
     -45deg,
@@ -254,7 +255,7 @@ h1, h2, h3 { font-family: var(--condensed); font-weight: 700; line-height: 1.0; 
   );
 }
 
-/* ── Badge ── */
+/* ══════════════ BADGE ══════════════ */
 .badge {
   display: inline-block;
   padding: .25rem .7rem;
@@ -268,7 +269,7 @@ h1, h2, h3 { font-family: var(--condensed); font-weight: 700; line-height: 1.0; 
   border: 1px solid rgba(214,43,43,.3);
 }
 
-/* ── Footer ── */
+/* ══════════════ FOOTER ══════════════ */
 footer {
   background: #0F1216;
   border-top: 3px solid var(--red);
@@ -349,7 +350,7 @@ footer {
   color: var(--ash);
 }
 
-/* ── Animations ── */
+/* ══════════════ REVEAL ANIMATIONS ══════════════ */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: none; }
@@ -358,13 +359,21 @@ footer {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: none; }
+}
 
 .anim-up  { animation: fadeUp  .7s ease both; }
 .anim-in  { animation: fadeIn  .7s ease both; }
 .d1 { animation-delay: .1s; }
 .d2 { animation-delay: .2s; }
 .d3 { animation-delay: .3s; }
+.d4 { animation-delay: .4s; }
+.d5 { animation-delay: .5s; }
+.d6 { animation-delay: .6s; }
 
+/* ══════════════ RESPONSIVE ══════════════ */
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
