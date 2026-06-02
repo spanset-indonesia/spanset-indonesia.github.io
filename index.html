@@ -5,8 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SpanSet Indonesia — Safety. Lifting. Protection.</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="description" content="SpanSet adalah pionir perlengkapan lifting, lashing, dan height safety di dunia, menjadi principal dari merek dagang no 1 di Indonesia sejak 1997.">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="title" content="SpanSet Indonesia — Safety. Lifting. Protection.">
+    <meta name="description"
+        content="SpanSet adalah pionir perlengkapan lifting, lashing, dan height safety di dunia, menjadi principal dari merek dagang no 1 di Indonesia sejak 1997.">
+    <meta name="keywords"
+        content="Spanset, Spanset Indonesia, Webbing Sling, Webbing, Lifting">
+    <meta name="author" content="Spanset">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesian">
+    <meta name="geo.position" content="-6.098882164993395;106.97517988021606" />
+    <meta name="geo.region" content="ID-JB" />
+    <meta name="geo.placename" content="Jawa Barat" />
+    <link rel="canonical" href="https://spanset.github.io/" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spanset.github.io/">
+    <meta property="og:title" content="SpanSet Indonesia — Safety. Lifting. Protection.">
+    <meta property="og:description"
+        content="SpanSet adalah pionir perlengkapan lifting, lashing, dan height safety di dunia, menjadi principal dari merek dagang no 1 di Indonesia sejak 1997.">
+    <meta property="og:image" content="https://spanset.github.io/Spanset-og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Spanset">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://spanset.github.io/">
+    <meta property="twitter:title" content="SpanSet Indonesia — Safety. Lifting. Protection.">
+    <meta property="twitter:description"
+        content="SpanSet adalah pionir perlengkapan lifting, lashing, dan height safety di dunia, menjadi principal dari merek dagang no 1 di Indonesia sejak 1997.">
+    <meta property="twitter:image" content="https://spanset.github.io/Spanset-og-image.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://spanset.github.io/Spanset.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://spanset.github.io/Spanset.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://spanset.github.io/sitemap.xml" />
   <style>
     /* ── Hero ── */
     .hero {
@@ -29,6 +59,7 @@
       pointer-events: none;
     }
 
+    /* diagonal grid lines */
     .hero::after {
       content: '';
       position: absolute; inset: 0;
@@ -45,18 +76,18 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 600;
       font-size: .72rem;
       letter-spacing: .28em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--spanset);
       margin-bottom: 1.8rem;
     }
-    .hero-eyebrow .line { width: 36px; height: 2px; background: var(--red); }
+    .hero-eyebrow .line { width: 36px; height: 2px; background: var(--spanset); }
 
     .hero h1 {
-      font-family: var(--display);
+      font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(4rem, 8vw, 7.5rem);
       line-height: .92;
       letter-spacing: .04em;
@@ -85,15 +116,15 @@
       border-top: 1px solid rgba(255,255,255,.08);
     }
     .hero-stat-num {
-      font-family: var(--display);
+      font-family: 'Bebas Neue', sans-serif;
       font-size: 2.6rem;
       letter-spacing: .06em;
       color: var(--white);
       line-height: 1;
     }
-    .hero-stat-num span { color: var(--red); }
+    .hero-stat-num span { color: var(--spanset); }
     .hero-stat-label {
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-size: .7rem;
       letter-spacing: .18em;
       text-transform: uppercase;
@@ -114,12 +145,12 @@
       width: 75%;
       background: var(--iron);
       border: 1px solid rgba(255,255,255,.07);
-      border-top: 3px solid var(--red);
+      border-top: 3px solid var(--spanset);
       padding: 2rem;
     }
 
     .hmc-label {
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-size: .68rem;
       letter-spacing: .2em;
       text-transform: uppercase;
@@ -139,14 +170,14 @@
     .hmc-dot {
       width: 8px; height: 8px;
       border-radius: 50%;
-      background: var(--red);
+      background: var(--spanset);
       flex-shrink: 0;
     }
     .hmc-dot.green { background: #27AE60; }
     .hmc-dot.yellow { background: #F1C40F; }
 
     .hmc-product-name {
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 600;
       font-size: .9rem;
       letter-spacing: .06em;
@@ -158,12 +189,12 @@
       letter-spacing: .08em;
     }
     .hmc-product-cert {
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-size: .68rem;
       letter-spacing: .1em;
       padding: .18rem .5rem;
       background: rgba(214,43,43,.15);
-      color: var(--red);
+      color: var(--spanset);
       border: 1px solid rgba(214,43,43,.3);
     }
 
@@ -171,17 +202,17 @@
       position: absolute;
       bottom: 5%; right: 0;
       width: 58%;
-      background: var(--red);
+      background: var(--spanset);
       padding: 1.6rem 2rem;
     }
     .hac-big {
-      font-family: var(--display);
+      font-family: 'Bebas Neue', sans-serif;
       font-size: 3rem;
       letter-spacing: .06em;
       line-height: 1;
     }
     .hac-sub {
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-size: .78rem;
       letter-spacing: .18em;
       text-transform: uppercase;
@@ -193,16 +224,16 @@
       position: absolute;
       right: 3%; top: 8%;
       width: 1.5px; height: 100px;
-      background: linear-gradient(to bottom, transparent, var(--red), transparent);
+      background: linear-gradient(to bottom, transparent, var(--spanset), transparent);
     }
 
     /* ── Marquee ── */
     .marquee-wrap {
-      background: var(--red);
+      background: var(--spanset);
       padding: .75rem 0;
       overflow: hidden;
-      border-top: 1px solid var(--red-dark);
-      border-bottom: 1px solid var(--red-dark);
+      border-top: 1px solid var(--spanset-dark);
+      border-bottom: 1px solid var(--spanset-dark);
     }
     .marquee-track {
       display: flex;
@@ -215,7 +246,7 @@
       align-items: center;
       gap: 1.5rem;
       padding: 0 2.5rem;
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
       font-size: .78rem;
       letter-spacing: .2em;
@@ -226,7 +257,7 @@
 
     @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-    /* ── Solutions ── */
+    /* ── Solutions section ── */
     .solutions-header {
       display: flex;
       justify-content: space-between;
@@ -237,7 +268,7 @@
     }
 
     .solutions-title {
-      font-family: var(--display);
+      font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(2.8rem, 5vw, 4.5rem);
       letter-spacing: .06em;
     }
@@ -265,7 +296,7 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 3px;
-      background: var(--red);
+      background: var(--spanset);
       transform: scaleX(0);
       transform-origin: left;
       transition: transform .3s ease;
@@ -282,7 +313,7 @@
     .sol-num {
       position: absolute;
       top: 2rem; right: 2rem;
-      font-family: var(--display);
+      font-family: 'Bebas Neue', sans-serif;
       font-size: 4rem;
       color: rgba(255,255,255,.04);
       line-height: 1;
@@ -290,7 +321,7 @@
     }
 
     .sol-title {
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
       font-size: 1.3rem;
       letter-spacing: .06em;
@@ -305,12 +336,12 @@
     }
 
     .sol-link {
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 600;
       font-size: .75rem;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--spanset);
     }
 
     /* ── Why SpanSet ── */
@@ -322,7 +353,7 @@
     }
 
     .why-title {
-      font-family: var(--display);
+      font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(3rem, 5.5vw, 5rem);
       letter-spacing: .05em;
       margin-bottom: 1.5rem;
@@ -344,11 +375,11 @@
       gap: 1rem;
       padding: 1.1rem 1.4rem;
       background: var(--iron);
-      border-left: 3px solid var(--red);
+      border-left: 3px solid var(--spanset);
     }
     .feature-item-icon { font-size: 1.2rem; flex-shrink: 0; }
     .feature-item-title {
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
       font-size: .95rem;
       letter-spacing: .06em;
@@ -369,10 +400,10 @@
       text-align: center;
     }
     .cert-block-name {
-      font-family: var(--display);
+      font-family: 'Bebas Neue', sans-serif;
       font-size: 1.5rem;
       letter-spacing: .08em;
-      color: var(--red);
+      color: var(--spanset);
       margin-bottom: .3rem;
     }
     .cert-block-desc {
@@ -382,12 +413,12 @@
       line-height: 1.5;
     }
 
-    /* ── Clients ── */
+    /* ── Clients strip ── */
     .clients-section { background: var(--iron); }
 
     .clients-label {
       text-align: center;
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-size: .72rem;
       letter-spacing: .28em;
       text-transform: uppercase;
@@ -409,7 +440,7 @@
       background: var(--iron);
       padding: 2rem 1.5rem;
       text-align: center;
-      font-family: var(--condensed);
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
       font-size: .9rem;
       letter-spacing: .12em;
@@ -421,7 +452,7 @@
 
     /* ── CTA Banner ── */
     .cta-banner {
-      background: var(--red);
+      background: var(--spanset);
       padding: 5rem 5vw;
       display: grid;
       grid-template-columns: 1fr auto;
@@ -435,7 +466,7 @@
       position: absolute;
       right: 5vw; top: 50%;
       transform: translateY(-50%);
-      font-family: var(--display);
+      font-family: 'Bebas Neue', sans-serif;
       font-size: 12rem;
       letter-spacing: .04em;
       color: rgba(255,255,255,.06);
@@ -443,7 +474,7 @@
       pointer-events: none;
     }
     .cta-banner-title {
-      font-family: var(--display);
+      font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(2.2rem, 4vw, 3.5rem);
       letter-spacing: .05em;
       line-height: 1;
@@ -455,11 +486,12 @@
     }
     .btn-white {
       background: #fff;
-      color: var(--red);
+      color: var(--spanset);
       clip-path: polygon(0 0, 93% 0, 100% 18%, 100% 100%, 7% 100%, 0 82%);
     }
     .btn-white:hover { background: var(--offwhite); }
 
+    /* ── Responsive ── */
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; min-height: auto; padding: 3rem 5vw; }
       .hero-visual { display: none; }
@@ -486,7 +518,7 @@
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="indexc" class="active">Home</a></li>
     <li><a href="products.html">Products</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -585,6 +617,7 @@
   <!-- ══ MARQUEE ══ -->
   <div class="marquee-wrap">
     <div class="marquee-track">
+      <!-- duplicated for infinite scroll -->
       <span class="marquee-item"><span class="marquee-sep"></span> Fall Protection Systems</span>
       <span class="marquee-item"><span class="marquee-sep"></span> Lifting & Rigging Equipment</span>
       <span class="marquee-item"><span class="marquee-sep"></span> Load Control Solutions</span>
