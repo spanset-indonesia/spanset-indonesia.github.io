@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — SpanSet Indonesia</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      background: var(--iron);
+      padding: 5rem 5vw 4rem;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--zinc);
+    }
+    .page-hero::before {
+      content: 'ABOUT';
+      position: absolute; right: 3vw; bottom: -1rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12rem;
+      color: rgba(255,255,255,.03);
+      line-height: 1; pointer-events: none;
+    }
+    .page-hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      letter-spacing: .05em; line-height: .95;
+    }
+    .page-hero-sub {
+      color: var(--ash); font-size: .95rem;
+      max-width: 55ch; line-height: 1.7; margin-top: 1.2rem;
+    }
+
+    /* ── Timeline ── */
+    .timeline { padding: 5rem 5vw; }
+    .timeline-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      letter-spacing: .06em; margin-bottom: 3.5rem;
+    }
+
+    .tl-track {
+      position: relative;
+      padding-left: 3rem;
+    }
+    .tl-track::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--red), var(--zinc));
+    }
+
+    .tl-item {
+      position: relative;
+      padding: 0 0 3rem 2.5rem;
+    }
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -2.5rem; top: .3rem;
+      width: 14px; height: 14px;
+      background: var(--red);
+      border: 2px solid var(--steel);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(214,43,43,.2);
+    }
+
+    .tl-year {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: .1em;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: .4rem;
+    }
+    .tl-event-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: .06em;
+      margin-bottom: .5rem;
+    }
+    .tl-event-desc {
+      font-size: .88rem;
+      color: var(--ash);
+      line-height: 1.65;
+      max-width: 60ch;
+    }
+
+    /* ── Mission/Vision ── */
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5px;
+      background: var(--zinc);
+    }
+    .mv-card {
+      background: var(--iron);
+      padding: 3.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .mv-card::before {
+      content: attr(data-letter);
+      position: absolute;
+      right: 2rem; bottom: -1rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 10rem;
+      color: rgba(255,255,255,.03);
+      line-height: 1;
+    }
+    .mv-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600; font-size: .7rem;
+      letter-spacing: .25em; text-transform: uppercase;
+      color: var(--red); margin-bottom: .8rem;
+      display: flex; align-items: center; gap: .7rem;
+    }
+    .mv-label::before { content: ''; width: 24px; height: 2px; background: var(--red); }
+    .mv-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem; letter-spacing: .06em;
+      margin-bottom: 1.2rem;
+    }
+    .mv-text { font-size: .9rem; color: var(--ash); line-height: 1.75; max-width: 44ch; }
+
+    /* ── Values ── */
+    .values-section { padding: 5rem 5vw; }
+    .values-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+      letter-spacing: .06em; margin-bottom: 2.5rem;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--zinc);
+    }
+    .value-item {
+      background: var(--steel);
+      padding: 2.5rem 2rem;
+      border-top: 3px solid transparent;
+      transition: border-color .25s, background .25s;
+    }
+    .value-item:hover { background: var(--iron); border-top-color: var(--red); }
+    .value-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem; color: rgba(255,255,255,.06);
+      letter-spacing: .04em; line-height: 1;
+      margin-bottom: .5rem;
+    }
+    .value-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 1.1rem;
+      letter-spacing: .08em; margin-bottom: .6rem;
+    }
+    .value-desc { font-size: .85rem; color: var(--ash); line-height: 1.65; }
+
+    /* ── Team / Global ── */
+    .global-section {
+      background: var(--iron);
+      padding: 5rem 5vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5vw;
+      align-items: center;
+    }
+    .global-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 4.5vw, 4rem);
+      letter-spacing: .05em; margin-bottom: 1.5rem;
+    }
+    .global-desc { color: var(--ash); line-height: 1.8; font-size: .9rem; margin-bottom: 2rem; }
+
+    .global-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--zinc);
+    }
+    .global-stat {
+      background: var(--iron);
+      padding: 2rem;
+      text-align: center;
+    }
+    .global-stat-n {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem; letter-spacing: .06em;
+      color: var(--white); line-height: 1;
+    }
+    .global-stat-n span { color: var(--red); }
+    .global-stat-l {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: .7rem; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--ash);
+      margin-top: .4rem;
+    }
+
+    /* ── Certs ── */
+    .certs-section { padding: 4rem 5vw; }
+    .certs-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem; letter-spacing: .06em; margin-bottom: 2rem;
+    }
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1px;
+      background: var(--zinc);
+    }
+    .cert-item {
+      background: var(--iron);
+      padding: 2rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      transition: background .2s;
+    }
+    .cert-item:hover { background: var(--zinc); }
+    .cert-item-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .cert-item-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 1rem;
+      letter-spacing: .06em; margin-bottom: .3rem;
+    }
+    .cert-item-desc { font-size: .78rem; color: var(--ash); line-height: 1.5; }
+
+    @media (max-width: 768px) {
+      .mv-grid, .global-section { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .global-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-mark">SS</div>
+    <div class="nav-logo-text">SpanSet <span>Indonesia</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta btn">Get a Quote →</a>
+</nav>
+
+<main class="page">
+
+  <div class="page-hero">
+    <div class="section-label anim-up">Our Story</div>
+    <h1 class="page-hero-title anim-up d1">27 YEARS.<br>ONE MISSION.</h1>
+    <p class="page-hero-sub anim-up d2">From a domestic Indonesian company to a full foreign-invested enterprise and member of the global SpanSet Group — our commitment to safety has never wavered.</p>
+  </div>
+
+  <!-- ══ MISSION / VISION ══ -->
+  <div class="mv-grid">
+    <div class="mv-card anim-up" data-letter="M">
+      <div class="mv-label">Our Mission</div>
+      <div class="mv-title">PROTECT<br>EVERY WORKER.</div>
+      <p class="mv-text">To be the preferred partner in safe lifting, load control, and height safety — delivering products, systems, and services that protect Indonesian workers across every industry, every day.</p>
+    </div>
+    <div class="mv-card anim-up d2" data-letter="V">
+      <div class="mv-label">Our Vision</div>
+      <div class="mv-title">ZERO<br>INCIDENTS.</div>
+      <p class="mv-text">A future where no worker is injured due to inadequate safety equipment. We pursue this through innovation, training, and uncompromising quality management — TQM at every level of our operation.</p>
+    </div>
+  </div>
+
+  <!-- ══ TIMELINE ══ -->
+  <section class="timeline stripe-bg">
+    <div class="section-label">Company History</div>
+    <div class="timeline-title">OUR JOURNEY<br>IN INDONESIA</div>
+    <div class="tl-track">
+      <div class="tl-item anim-up d1">
+        <div class="tl-year">1975</div>
+        <div class="tl-event-title">SpanSet International Founded</div>
+        <p class="tl-event-desc">SpanSet Group established in Europe, beginning over 50 years of engineering high-strength lifting, lashing, and personal protection solutions from synthetic fibres.</p>
+      </div>
+      <div class="tl-item anim-up d2">
+        <div class="tl-year">1997</div>
+        <div class="tl-event-title">PT. SpanSet Indonesia Established</div>
+        <p class="tl-event-desc">Founded as a domestic Indonesian company, bringing world-class SpanSet safety engineering to the Indonesian market for the first time. Initial focus on lifting and load control products.</p>
+      </div>
+      <div class="tl-item anim-up d3">
+        <div class="tl-year">2008</div>
+        <div class="tl-event-title">ISO 9001:2008 Certification</div>
+        <p class="tl-event-desc">Certified by Lloyd's Register Quality Assurance under ISO 9001:2008, formalizing our commitment to quality management and continuous improvement across all operations.</p>
+      </div>
+      <div class="tl-item anim-up d4">
+        <div class="tl-year">2013</div>
+        <div class="tl-event-title">Becomes Foreign Investment Company</div>
+        <p class="tl-event-desc">PT. SpanSet Indonesia transitions to a foreign-invested company, fully integrating into the international SpanSet Group structure with access to global R&D, manufacturing, and innovation networks.</p>
+      </div>
+      <div class="tl-item anim-up d5">
+        <div class="tl-year">2015</div>
+        <div class="tl-event-title">TNI AD Military Certification</div>
+        <p class="tl-event-desc">Products awarded Certificate of Testing from Dinas Penelitian dan Pengembangan TNI AD — a testament to the reliability and strength of our equipment under the most demanding conditions.</p>
+      </div>
+      <div class="tl-item anim-up d6">
+        <div class="tl-year">Today</div>
+        <div class="tl-event-title">500,000+ Hours of Field Experience</div>
+        <p class="tl-event-desc">Our specialists have accumulated over 500,000 hours of field experience across Indonesian industries. We continue to expand our training, inspection, and product portfolio for tomorrow's challenges.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VALUES ══ -->
+  <section class="values-section">
+    <div class="section-label">Core Values</div>
+    <div class="values-title">WHAT DRIVES US</div>
+    <div class="values-grid">
+      <div class="value-item anim-up d1">
+        <div class="value-num">01</div>
+        <div class="value-title">Safety First. Always.</div>
+        <p class="value-desc">Safety was, is, and always will be our top priority. Every product decision, every specification, every training module is built with one goal: protecting human life.</p>
+      </div>
+      <div class="value-item anim-up d2">
+        <div class="value-num">02</div>
+        <div class="value-title">Uncompromising Quality</div>
+        <p class="value-desc">TQM at every level. From raw material sourcing to finished product, our quality assurance ensures continuity in development that our clients can depend on.</p>
+      </div>
+      <div class="value-item anim-up d3">
+        <div class="value-num">03</div>
+        <div class="value-title">Innovation Through Engineering</div>
+        <p class="value-desc">Backed by 50+ years of global R&D, we bring cutting-edge solutions and new product categories to the Indonesian market as safety needs evolve.</p>
+      </div>
+      <div class="value-item anim-up d4">
+        <div class="value-num">04</div>
+        <div class="value-title">Partnership & Trust</div>
+        <p class="value-desc">We work hand in hand with clients — not just selling products but consulting, training, and inspecting to deliver complete safety solutions tailored to each industry.</p>
+      </div>
+      <div class="value-item anim-up d5">
+        <div class="value-num">05</div>
+        <div class="value-title">Local Knowledge, Global Standards</div>
+        <p class="value-desc">We understand Indonesia's unique regulatory landscape, industrial conditions, and local workforce needs — combined with the international expertise of the SpanSet Group.</p>
+      </div>
+      <div class="value-item anim-up d6">
+        <div class="value-num">06</div>
+        <div class="value-title">Continuous Learning</div>
+        <p class="value-desc">Safety knowledge evolves. Our training programs, field experience, and partnerships keep our teams and clients at the forefront of best practice in Indonesia and globally.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ GLOBAL GROUP ══ -->
+  <section class="global-section">
+    <div class="anim-up">
+      <div class="section-label">SpanSet International Group</div>
+      <div class="global-title">GLOBAL REACH,<br>LOCAL ROOTS.</div>
+      <p class="global-desc">PT. SpanSet Indonesia is proud to be part of the International SpanSet Group — a worldwide network of authorized distributors, licensees, manufacturing facilities, and agents spanning multiple continents. This gives us access to the very latest in safety engineering innovation while remaining deeply embedded in the Indonesian market we serve.</p>
+      <a href="contact.html" class="btn btn-primary">Work With Us →</a>
+    </div>
+    <div class="anim-up d2">
+      <div class="global-stats">
+        <div class="global-stat">
+          <div class="global-stat-n">50<span>+</span></div>
+          <div class="global-stat-l">Years Global</div>
+        </div>
+        <div class="global-stat">
+          <div class="global-stat-n">27<span>+</span></div>
+          <div class="global-stat-l">Years in Indonesia</div>
+        </div>
+        <div class="global-stat">
+          <div class="global-stat-n">500<span>K</span></div>
+          <div class="global-stat-l">Field Hours</div>
+        </div>
+        <div class="global-stat">
+          <div class="global-stat-n">ISO<span>✓</span></div>
+          <div class="global-stat-l">9001 Certified</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CERTIFICATIONS ══ -->
+  <section class="certs-section">
+    <div class="section-label">Certifications & Standards</div>
+    <div class="certs-title">VERIFIED &<br>CERTIFIED</div>
+    <div class="certs-grid">
+      <div class="cert-item anim-up d1">
+        <span class="cert-item-icon">🏅</span>
+        <div>
+          <div class="cert-item-name">ISO 9001</div>
+          <div class="cert-item-desc">Quality Management System certified by Lloyd's Register Quality Assurance</div>
+        </div>
+      </div>
+      <div class="cert-item anim-up d2">
+        <span class="cert-item-icon">🇮🇩</span>
+        <div>
+          <div class="cert-item-name">SNI</div>
+          <div class="cert-item-desc">Indonesian National Standard compliance across all relevant product categories</div>
+        </div>
+      </div>
+      <div class="cert-item anim-up d3">
+        <span class="cert-item-icon">🇪🇺</span>
+        <div>
+          <div class="cert-item-name">CE / EN</div>
+          <div class="cert-item-desc">European conformity marking to EN standards for lifting, height safety, and load control</div>
+        </div>
+      </div>
+      <div class="cert-item anim-up d4">
+        <span class="cert-item-icon">⚔️</span>
+        <div>
+          <div class="cert-item-name">TNI AD</div>
+          <div class="cert-item-desc">Certificate of Testing — Dinas Penelitian & Pengembangan TNI Angkatan Darat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a class="nav-logo" href="index.html" style="text-decoration:none;display:inline-flex;margin-bottom:.5rem;">
+        <div class="nav-logo-mark">SS</div>
+        <div class="nav-logo-text">SpanSet <span>Indonesia</span></div>
+      </a>
+      <p class="footer-brand-desc">PT. SpanSet Indonesia — lifting, load control, and height safety solutions across Indonesia since 1997.</p>
+      <div class="footer-certs">
+        <span class="cert-tag">ISO 9001</span>
+        <span class="cert-tag">SNI</span>
+        <span class="cert-tag">CE Marked</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-title">Navigation</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">Products</div>
+      <ul class="footer-links">
+        <li><a href="products.html#lifting">Lifting Systems</a></li>
+        <li><a href="products.html#height">Height Safety</a></li>
+        <li><a href="products.html#load">Load Control</a></li>
+        <li><a href="products.html#wire">Wire Rope</a></li>
+        <li><a href="products.html#training">Training</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">Contact</div>
+      <div class="footer-contact-item"><span class="icon">📍</span><span>Jakarta, Indonesia</span></div>
+      <div class="footer-contact-item"><span class="icon">📞</span><span>+62 21 XXX XXXX</span></div>
+      <div class="footer-contact-item"><span class="icon">✉️</span><span>info@spanset.com</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PT. SpanSet Indonesia. All rights reserved.</span>
+    <span>Part of SpanSet International Group</span>
+  </div>
+</footer>
+</body>
+</html>
