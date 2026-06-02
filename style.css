@@ -19,6 +19,7 @@
   --offwhite: #E8EBEE;
   --spanset: #004b73;
   --spansetyellow: #ffc107;
+  --spansetdark: #01334d;
 
   --display: 'Bebas Neue', sans-serif;
   --condensed: 'Barlow Condensed', sans-serif;
@@ -132,7 +133,7 @@ body {
   align-items: center;
   gap: 8px;
   padding: .55rem 1.4rem;
-  background: var(--red);
+  background: var(--spansetyellow);
   color: #fff !important;
   font-family: var(--condensed);
   font-weight: 700;
@@ -162,7 +163,7 @@ body {
   font-size: .72rem;
   letter-spacing: .28em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--spansetyellow);
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -208,14 +209,14 @@ h1, h2, h3 { font-family: var(--condensed); font-weight: 700; line-height: 1.0; 
   color: #fff;
   clip-path: polygon(0 0, 93% 0, 100% 18%, 100% 100%, 7% 100%, 0 82%);
 }
-.btn-primary:hover { background: var(--red-dark); }
+.btn-primary:hover { background: var(--spansetdark); }
 
 .btn-outline {
   background: transparent;
   color: var(--white);
   border: 1.5px solid var(--silver);
 }
-.btn-outline:hover { border-color: var(--red); color: var(--red); }
+.btn-outline:hover { border-color: var(--spansetyellow); color: var(--spansetyellow); }
 
 .btn-ghost {
   background: transparent;
